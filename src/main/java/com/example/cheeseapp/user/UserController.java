@@ -18,11 +18,6 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;  // field injection
 
-//    @GetMapping
-//    public String getUsers() {
-//        return "List of all users";
-//    }
-
     @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
 
