@@ -28,10 +28,6 @@ public class User {
             unique = true)
     private String email;
 
-    @Column(name = "location",
-            nullable = false)
-    private String location;
-
     @Column(name = "profile_image_id",
             nullable = false)
     private String profileImageId;
@@ -59,13 +55,21 @@ public class User {
             nullable = false)
     private LocalDateTime modifiedAt = LocalDateTime.now();
 
-    public User(String username, String email, String location, String profileImageId, String description, UserType type, UserStatus status) {
+    @Column(name = "created_by")
+    private String createdBy;
+    @Column(name = "modified_by")
+    private String modifiedBy;
+
+
+
+
+    public User(String username, String email, String profileImageId, String description, UserType type, UserStatus status) {
         this.username = username;
         this.email = email;
-        this.location = location;
         this.profileImageId = profileImageId;
         this.description = description;
         this.type = type;
         this.status = status;
     }
+
 }

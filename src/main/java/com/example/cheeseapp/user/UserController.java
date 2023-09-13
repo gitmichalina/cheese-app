@@ -99,7 +99,6 @@ public class UserController {
         user.setType(newUserData.getType());
         user.setUsername(newUserData.getUsername());
         user.setEmail(newUserData.getEmail());
-        user.setLocation(newUserData.getLocation());
         user.setProfileImageId(newUserData.getProfileImageId());
         user.setDescription(newUserData.getDescription());
         user.setModifiedAt((newUserData.getModifiedAt()));
@@ -113,7 +112,7 @@ public class UserController {
     public ResponseEntity<HttpStatus> deleteUserById(@PathVariable("userId") Long userId) {
 
         userRepository.deleteById(userId);
-        return new ResponseEntity(HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.OK);
 
         // jak nie znajdzie id to jest 500
 

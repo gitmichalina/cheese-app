@@ -1,8 +1,4 @@
 package com.example.cheeseapp.personal.data;
-
-
-
-
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -40,10 +36,20 @@ public class PersonalData {
             nullable = false)
     private Gender gender;
 
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
-    @Column(name = "modified_at")
-    private LocalDateTime modifiedAt;
+    @Column(name = "location",
+            nullable = false)
+    private String location;
+
+    @Column(name = "created_at",
+            nullable = false,
+            updatable = false
+    )
+    private LocalDateTime createdAt = LocalDateTime.now();
+
+    @Column(name = "modified_at",
+            nullable = false)
+    private LocalDateTime modifiedAt = LocalDateTime.now();
+
     @Column(name = "created_by")
     private String createdBy;
     @Column(name = "modified_by")
