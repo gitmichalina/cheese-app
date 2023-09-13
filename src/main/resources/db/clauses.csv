@@ -1,0 +1,3 @@
+id,type,status,content,required,created_at,created_by,modified_at,modified_by
+e65b4a06-b66e-11ec-b909-0242ac120002,TERMS_OF_USE,ACCEPTED,"Wyrażam zgodę na przetwarzania moich danych osobowych.",null,null,null,null
+e65b4c5e-b66e-11ec-b909-0242ac120002,MARKETING,ACCEPTED,"Wyrażam zgodę na marketing.",null,null,null,nul
