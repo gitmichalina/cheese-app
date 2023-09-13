@@ -5,5 +5,7 @@ public enum Family {
     SWISS_CHEESE,
     BRIE,
     CAMEMBERT,
-    BLUE
+    BLUE,
+    FETA,
+    GOUDA
 }

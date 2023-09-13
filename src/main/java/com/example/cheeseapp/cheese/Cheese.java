@@ -3,6 +3,7 @@ package com.example.cheeseapp.cheese;
 
 import lombok.*;
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name="cheese")
@@ -14,10 +15,9 @@ import javax.persistence.*;
 public class Cheese {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String summary;
     private String description;
     private String region;
     private String aroma;
@@ -29,10 +29,15 @@ public class Cheese {
     private Rind rind;
     private Texture texture;
     private Type type;
+    private String alternativeSpellings;
 
     @Column(name = "created_at")
-    private String createdAt;
+    private LocalDateTime createdAt;
     @Column(name = "modified_at")
-    private String modifiedAt;
+    private LocalDateTime modifiedAt;
+    @Column(name = "created_by")
+    private String createdBy;
+    @Column(name = "modified_by")
+    private String modifiedBy;
 
 }
